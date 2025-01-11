@@ -4,6 +4,7 @@ import store from '@/store'
 import LandingView from '@/views/LandingView.vue'
 import HomeView from '../views/HomeView.vue'
 
+import PkmnHomeView from '@/views/games/HOME/PkmnHomeView.vue'
 import KantoGen1View from '@/views/games/RBY/KantoGen1View.vue'
 import JohtoGen2View from '@/views/games/GSC/JohtoGen2View.vue'
 import HoennGen3View from '@/views/games/RSE/HoennGen3View.vue'
@@ -49,6 +50,12 @@ const routes = [
     name: 'home',
     meta: { requiresAuth: true },
     component: HomeView
+  },
+  {
+    path: '/games/pkmn-home',
+    name: 'pkmn-home',
+    meta: { requiresAuth: true },
+    component: PkmnHomeView
   },
   {
     path: '/games/rby/kanto',

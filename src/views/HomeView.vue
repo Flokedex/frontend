@@ -23,7 +23,7 @@ export default {
   data () {
     return {
       links: [
-        { name: 'Pokemon Home', path: '/games/home/home', image: require('@/assets/navImgs/home.webp') },
+        { name: 'Pokemon Home', path: '/games/pkmn-home', image: require('@/assets/navImgs/home.webp') },
         { name: 'Red, Blue and Yellow', path: '/games/rby/kanto', image: require('@/assets/navImgs/rby.webp') },
         { name: 'Gold, Silver and Crystal', path: '/games/gsc/johto', image: require('@/assets/navImgs/gsc.png') },
         { name: 'Ruby, Sapphire and Emerald', path: '/games/rse/hoenn', image: require('@/assets/navImgs/rse.png') },
