@@ -29,7 +29,7 @@
           </a>
         </p>
 
-        <button class="discord-login-button" @click="loginWithDiscord">
+        <button class="discord-login-button" @click="$loginWithDiscord">
   <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg" alt="Discord Icon" style="width: 20px; height: 20px; margin-right: 8px;">
 Continue with Discord
 </button>
@@ -39,13 +39,7 @@ Continue with Discord
 
 <script>
 export default {
-  name: 'LandingPage',
-  methods: {
-    loginWithDiscord () {
-      window.location.href = 'https://pkmn.flobauch.online/api/auth/discord/login'
-      console.log('Logging in with Discord...')
-    }
-  }
+  name: 'LandingPage'
 }
 </script>
 
