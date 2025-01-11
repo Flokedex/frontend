@@ -1,0 +1,112 @@
+@import './_globals.scss';
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $primary-background-color;
+    color: $primary-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @supports not (position: sticky) {
+        position: fixed;
+        width: 100%;
+    }
+
+    .home-button {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        padding: 0;
+        cursor: pointer;
+        color: $primary-color;
+
+        &:hover,
+        &:focus-visible {
+            color: darken($primary-color, 10%);
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1rem;
+
+        @media (max-width: 1024px) {
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            gap: 1rem;
+            font-size: 0.65rem;
+        }
+
+        /* Allow horizontal scrolling if content overflows */
+        overflow-x: auto;
+        white-space: nowrap;
+
+        &.nav-collapsible {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: $primary-color;
+            max-width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+
+            &:hover,
+            &:focus-visible {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                max-width: 100px;
+            }
+        }
+
+        .nav-fallback {
+            font-size: inherit;
+            color: $primary-color;
+            text-align: center;
+            padding: 0.5rem;
+
+            @media (max-width: 768px) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .logout-button {
+        @include button-style($logout-color);
+        color: #fff;
+
+        &:hover,
+        &:focus-visible {
+            background-color: darken($logout-color, 10%);
+        }
+    }
+}

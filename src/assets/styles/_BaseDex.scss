@@ -1,0 +1,187 @@
+@import './_globals.scss';
+
+// _BaseDex.scss
+
+.base-dex {
+    font-family: $primary-font;
+    background-color: $primary-background-color;
+    color: $primary-color;
+    padding: 1rem;
+
+    .discord-id-display {
+        color: $discord-color;
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        text-align: center;
+
+        .main-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .search-bar {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        input[type='text'] {
+            width: 25%;
+            max-width: 400px;
+            padding: 0.5rem;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+        }
+    }
+
+    .loading-state,
+    .error-state {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+
+        &.error-state {
+            color: $google-color;
+        }
+    }
+
+    .action-buttons-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        .action-buttons {
+            display: flex;
+            gap: 5rem;
+
+            .styled-button {
+                @include button-style($primary-color);
+                color: #fff;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+
+        .pokemon-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0.5rem;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &.caught {
+                background-color: $caught-colour;
+            }
+
+            &.shiny {
+                background-color: $shiny-colour;
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .pokemon-image {
+                //width: 100%;
+                /* Or any specific size you need */
+                max-width: 100%;
+                height: auto;
+                /* Preserve sharp edges */
+                cursor: pointer;
+            }
+
+            .pokemon-name {
+                margin-top: 0.5rem;
+
+                h3 {
+                    font-size: 1rem;
+                    margin: 0;
+                }
+            }
+
+            .pokemon-card-actions {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-top: 0.5rem;
+
+                .pokeball-button,
+                .shiny-button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                }
+
+                .pokeball-button img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+
+        .pagination-prev,
+        .pagination-next {
+            @include button-style($primary-color);
+            color: #fff;
+            margin: 0 1rem;
+
+            &:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+            }
+
+            &:hover:not(:disabled) {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+
+        .pagination-info {
+            font-size: 1rem;
+        }
+    }
+
+    .jump-to-container {
+        text-align: center;
+        margin-top: 1rem;
+
+        .jump-to-label {
+            font-size: 1rem;
+
+            .jump-to-input {
+                width: 60px;
+                margin-left: 0.5rem;
+                padding: 0.3rem;
+                border: 1px solid $primary-color;
+                border-radius: 5px;
+            }
+        }
+    }
+}

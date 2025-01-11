@@ -12,7 +12,7 @@ export default {
         return
       }
 
-      window.location.href = `${baseUrl}${baseEndpoint}${loginEndpoint}`
+      window.location.href = `${baseUrl}/${baseEndpoint}${loginEndpoint}`
       console.log('Logging in with Discord...')
     }
   }
