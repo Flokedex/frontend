@@ -1,0 +1,64 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+// Variables
+// --- Primaries
+$primary-font: 'Roboto Mono', monospace;
+$primary-color: #333;
+$primary-background-color: #f9f9f9;
+//primary-color: #f9f9f9;
+//primary-background-color: #333;
+$secondary-color: #333;
+$secondary-background-color: #f9f9f9;
+$discord-color: #5865F2;
+$google-color: #F25D5D;
+$logout-color: #7c5959;
+
+$caught-colour: #ccffcd;
+$shiny-colour: #fffccd;
+
+// Mix-ins
+
+@mixin button-style($bg-color) {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: $bg-color;
+    font-size: 1rem;
+    color: #000
+}
+
+@mixin discord-login-button($font-color) {
+    @include button-style($discord-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF; // Text color set to white for contrast
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover {
+        background-color: darken(#5865F2, 10%); // Slightly darker Blurple on hover
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+body {
+    background-color: $primary-background-color;
+    font-family: $primary-font;
+}

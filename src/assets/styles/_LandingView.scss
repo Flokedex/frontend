@@ -1,0 +1,30 @@
+@import './_globals.scss';
+
+.landing-view {
+    background-color: $primary-background-color;
+    font-family: $primary-font;
+    text-align: center;
+    padding: 20px;
+
+    .logo img {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto 20px;
+    }
+
+    .discord-login-button {
+        @include discord-login-button($primary-background-color);
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .discord-login-button img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+}
