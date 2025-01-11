@@ -5,4 +5,12 @@ import store from './store'
 
 import '@/assets/styles/_globals.scss'
 
-createApp(App).use(store).use(router).mount('#app')
+// Import the global methods plugin
+import globalMethods from './globals/authGlobals'
+
+const app = createApp(App)
+
+// Use the global methods plugin
+app.use(globalMethods)
+
+app.use(store).use(router).mount('#app')
