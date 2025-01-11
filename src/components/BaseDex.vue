@@ -141,6 +141,11 @@ export default {
     }
   },
   methods: {
+    markAllOnPageAsCaught () {
+      this.paginatedList.forEach(pokemon => {
+        pokemon.isCaught = true
+      })
+    },
     capitalizeWords (str) {
       return str.replace(/\b\w/g, char => char.toUpperCase())
     },
