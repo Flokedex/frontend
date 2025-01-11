@@ -53,116 +53,134 @@ const routes = [
   {
     path: '/games/rby/kanto',
     name: 'kanto-gen1',
+    meta: { requiresAuth: true },
     component: KantoGen1View
   },
   {
     path: '/games/gsc/johto',
     name: 'johto-gen2',
+    meta: { requiresAuth: true },
     component: JohtoGen2View
   },
   {
     path: '/games/rse/hoenn',
     name: 'hoenn-gen3',
+    meta: { requiresAuth: true },
     component: HoennGen3View
   },
   {
     path: '/games/frlg/kanto',
     name: 'kanto-gen3',
+    meta: { requiresAuth: true },
     component: KantoGen3View
   },
   {
     path: '/games/dp/sinnoh',
     name: 'sinnoh-gen4',
+    meta: { requiresAuth: true },
     component: SinnohGen4View
   },
   {
     path: '/games/pt/sinnoh',
     name: 'sinnoh-extended',
+    meta: { requiresAuth: true },
     component: SinnohExtendedView
   },
   {
     path: '/games/hgss/johto',
     name: 'johto-gen4',
+    meta: { requiresAuth: true },
     component: JohtoGen4View
   },
   {
     path: '/games/bw/unova',
     name: 'unova-original',
+    meta: { requiresAuth: true },
     component: UnovaOriginalView
   },
   {
     path: '/games/bw2/unova',
     name: 'unova-updated',
+    meta: { requiresAuth: true },
     component: UnovaUpdatedView
   },
   {
     path: '/games/xy',
     name: 'xy',
+    meta: { requiresAuth: true },
     children: [
-      { path: 'kalos-central', name: 'kalos-central', component: KalosCentralView },
-      { path: 'kalos-coastal', name: 'kalos-coastal', component: KalosCoastalView },
-      { path: 'kalos-mountain', name: 'kalos-mountain', component: KalosMountainView }
+      { path: 'kalos-central', name: 'kalos-central', meta: { requiresAuth: true }, component: KalosCentralView },
+      { path: 'kalos-coastal', name: 'kalos-coastal', meta: { requiresAuth: true }, component: KalosCoastalView },
+      { path: 'kalos-mountain', name: 'kalos-mountain', meta: { requiresAuth: true }, component: KalosMountainView }
     ]
   },
   {
     path: '/games/oras/hoenn',
     name: 'hoenn-gen6',
+    meta: { requiresAuth: true },
     component: HoennGen6View
   },
   {
     path: '/games/sm',
     name: 'sm',
+    meta: { requiresAuth: true },
     children: [
-      { path: 'melemele', name: 'melemele-original', component: MelemeleOriginalView },
-      { path: 'akala', name: 'akala-original', component: AkalaOriginalView },
-      { path: 'ulaula', name: 'ulaula-original', component: UlaulaOriginalView },
-      { path: 'poni', name: 'poni-original', component: PoniOriginalView },
-      { path: 'alola', name: 'alola-original', component: AlolaOriginalView }
+      { path: 'melemele', name: 'melemele-original', meta: { requiresAuth: true }, component: MelemeleOriginalView },
+      { path: 'akala', name: 'akala-original', meta: { requiresAuth: true }, component: AkalaOriginalView },
+      { path: 'ulaula', name: 'ulaula-original', meta: { requiresAuth: true }, component: UlaulaOriginalView },
+      { path: 'poni', name: 'poni-original', meta: { requiresAuth: true }, component: PoniOriginalView },
+      { path: 'alola', name: 'alola-original', meta: { requiresAuth: true }, component: AlolaOriginalView }
     ]
   },
   {
     path: '/games/usum',
     name: 'usum',
+    meta: { requiresAuth: true },
     children: [
-      { path: 'melemele', name: 'melemele-updated', component: MelemeleUpdatedView },
-      { path: 'akala', name: 'akala-updated', component: AkalaUpdatedView },
-      { path: 'ulaula', name: 'ulaula-updated', component: UlaulaUpdatedView },
-      { path: 'poni', name: 'poni-updated', component: PoniUpdatedView },
-      { path: 'alola', name: 'alola-updated', component: AlolaUpdatedView }
+      { path: 'melemele', name: 'melemele-updated', meta: { requiresAuth: true }, component: MelemeleUpdatedView },
+      { path: 'akala', name: 'akala-updated', meta: { requiresAuth: true }, component: AkalaUpdatedView },
+      { path: 'ulaula', name: 'ulaula-updated', meta: { requiresAuth: true }, component: UlaulaUpdatedView },
+      { path: 'poni', name: 'poni-updated', meta: { requiresAuth: true }, component: PoniUpdatedView },
+      { path: 'alola', name: 'alola-updated', meta: { requiresAuth: true }, component: AlolaUpdatedView }
     ]
   },
   {
     path: '/games/letsgo/kanto',
     name: 'kanto-letsgo',
+    meta: { requiresAuth: true },
     component: KantoLetsgoView
   },
   {
     path: '/games/swsh',
     name: 'swsh',
+    meta: { requiresAuth: true },
     children: [
-      { path: 'galar', name: 'galar', component: GalarView },
-      { path: 'isle-of-armor', name: 'isle-of-armor', component: IsleOfArmorView },
-      { path: 'crown-tundra', name: 'crown-tundra', component: CrownTundraView }
+      { path: 'galar', name: 'galar', meta: { requiresAuth: true }, component: GalarView },
+      { path: 'isle-of-armor', name: 'isle-of-armor', meta: { requiresAuth: true }, component: IsleOfArmorView },
+      { path: 'crown-tundra', name: 'crown-tundra', meta: { requiresAuth: true }, component: CrownTundraView }
     ]
   },
   {
     path: '/games/bdsp/sinnoh',
     name: 'sinnoh-updated',
+    meta: { requiresAuth: true },
     component: SinnohUpdatedView
   },
   {
     path: '/games/pla/hisui',
     name: 'hisui',
+    meta: { requiresAuth: true },
     component: HisuiView
   },
   {
     path: '/games/sv',
     name: 'sv',
+    meta: { requiresAuth: true },
     children: [
-      { path: 'paldea', name: 'paldea', component: PaldeaView },
-      { path: 'kitakami', name: 'kitakami', component: KitakamiView },
-      { path: 'blueberry', name: 'blueberry', component: BlueberryView },
-      { path: 'unreg', name: 'paldea-unreg', component: PaldeaUnregView }
+      { path: 'paldea', name: 'paldea', meta: { requiresAuth: true }, component: PaldeaView },
+      { path: 'kitakami', name: 'kitakami', meta: { requiresAuth: true }, component: KitakamiView },
+      { path: 'blueberry', name: 'blueberry', meta: { requiresAuth: true }, component: BlueberryView },
+      { path: 'unreg', name: 'paldea-unreg', meta: { requiresAuth: true }, component: PaldeaUnregView }
     ]
   }
 ]

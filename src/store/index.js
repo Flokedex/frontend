@@ -19,7 +19,6 @@ export default createStore({
   },
   actions: {
     async fetchUser ({ commit }) {
-      console.log('Fetched')
       try {
         const backendUrl = process.env.NODE_ENV === 'production'
           ? process.env.VUE_APP_PROD_BACKEND_URL
