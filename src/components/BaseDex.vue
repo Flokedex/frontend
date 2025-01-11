@@ -32,9 +32,11 @@
               <button class="pokeball-button" @click="toggleCaught(pokemon)">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" alt="Poké Ball Icon" />
               </button>
+              <div v-if="game !== 'rby'">
               <button class="shiny-button" @click="toggleShiny(pokemon)">
                 {{ pokemon.isShiny ? '💫' : '✨' }}
               </button>
+              </div>
             </div>
           </div>
         </div>
