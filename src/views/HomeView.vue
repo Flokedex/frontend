@@ -4,14 +4,18 @@
       <p class="greeting"> Hello, {{ user.name }} ({{ user.discord_id }})</p>
       <p class="description">Select a dex and start tracking.</p>
       <div class="nav-links">
-        <ul>
-          <li v-for="link in links" :key="link.path" class="nav-item">
-            <router-link :to="link.path" class="nav-link">
-              <img :src="link.image" :alt="`${link.name} logo`" class="nav-image" />
-              <span class="nav-text">{{ link.name }}</span>
-            </router-link>
-          </li>
-        </ul>
+        <li v-if="links.length" :key="links[0].path" class="nav-item nav-item-full">
+          <router-link :to="links[0].path" class="nav-link">
+            <img :src="links[0].image" :alt="`${links[0].name} logo`" class="nav-image" />
+            <span class="nav-text">{{ links[0].name }}</span>
+          </router-link>
+        </li>
+        <li v-for="link in links.slice(1)" :key="link.path" class="nav-item">
+          <router-link :to="link.path" class="nav-link">
+            <img :src="link.image" :alt="`${link.name} logo`" class="nav-image" />
+            <span class="nav-text">{{ link.name }}</span>
+          </router-link>
+        </li>
       </div>
     </main>
   </div>
@@ -54,5 +58,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/_HomeView.scss';
+@import '@/assets/styles/_HomeView2.scss';
 </style>
