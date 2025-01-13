@@ -3,6 +3,8 @@ import store from '@/store'
 
 import LandingView from '@/views/LandingView.vue'
 import HomeView from '../views/HomeView.vue'
+import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
+import LegalView from '@/views/LegalView.vue'
 
 import PkmnHomeView from '@/views/games/HOME/PkmnHomeView.vue'
 import KantoGen1View from '@/views/games/RBY/KantoGen1View.vue'
@@ -50,6 +52,16 @@ const routes = [
     name: 'home',
     meta: { requiresAuth: true },
     component: HomeView
+  },
+  {
+    path: '/privacy-policy',
+    name: 'privacy-policy',
+    component: PrivacyPolicy
+  },
+  {
+    path: '/legal',
+    name: 'legal',
+    component: LegalView
   },
   {
     path: '/games/pkmn-home',

@@ -3,7 +3,7 @@
     <main>
       <p class="greeting"> Hello, {{ user.name }} ({{ user.discord_id }})</p>
       <p class="description">Select a dex and start tracking.</p>
-      <div class="nav-links">
+      <ul class="nav-links">
         <li v-if="links.length" :key="links[0].path" class="nav-item nav-item-full">
           <router-link :to="links[0].path" class="nav-link">
             <img :src="links[0].image" :alt="`${links[0].name} logo`" class="nav-image" />
@@ -16,7 +16,7 @@
             <span class="nav-text">{{ link.name }}</span>
           </router-link>
         </li>
-      </div>
+      </ul>
     </main>
   </div>
 </template>
@@ -58,5 +58,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/_HomeView2.scss';
+@import '@/assets/styles/_HomeView.scss';
 </style>

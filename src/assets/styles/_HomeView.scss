@@ -12,20 +12,32 @@
     }
 
     .nav-links {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
+        align-items: center;
         justify-content: center;
+        padding: 0;
+        /* Remove any padding */
 
-        @media (min-width: 768px) {
+        @media (min-width: 1090px) {
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
         }
 
         .nav-item {
             list-style: none;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            /* Remove any padding */
 
             &.nav-item-full {
-                grid-column: span 3;
+                @media (min-width: 1090px) {
+                    grid-column: span 3;
+                }
             }
 
             .nav-link {

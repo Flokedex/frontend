@@ -1,0 +1,29 @@
+@import './_globals.scss';
+
+.bottom-bar {
+    background-color: $primary-background-color;
+    font-family: $primary-font;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bottom-nav a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav a:hover {
+    color: #3498db;
+}
