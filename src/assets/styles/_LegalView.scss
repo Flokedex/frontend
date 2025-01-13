@@ -1,0 +1,28 @@
+@import './_globals.scss';
+
+.legal-notice {
+    background-color: $primary-background-color;
+    font-family: $primary-font;
+    text-align: center;
+    padding: 20px;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        padding-left: 1.5em;
+        text-indent: -1.5em;
+        position: relative;
+    }
+
+    li::before {
+        content: '•';
+        color: $primary-color;
+        font-weight: bold;
+        display: inline-block;
+        width: 1.5em;
+        margin-left: -1.5em;
+    }
+}

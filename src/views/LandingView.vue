@@ -39,8 +39,10 @@ Continue with Discord
   </template>
 
 <script>
+import BottomBar from '@/components/BottomBar.vue'
 export default {
-  name: 'LandingPage'
+  name: 'LandingPage',
+  components: BottomBar
 }
 </script>
 
