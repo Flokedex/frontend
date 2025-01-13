@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     showBottomBar () {
-      const routesWithBottomBar = ['/privacy-policy', '/disclaimer', '/']
+      const routesWithBottomBar = ['/privacy-policy', '/disclaimer', '/', '/home']
       return routesWithBottomBar.includes(this.$route.path)
     }
   }

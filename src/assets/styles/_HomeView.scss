@@ -84,4 +84,21 @@
             }
         }
     }
+
+    .logout-button {
+        @include button-style($logout-color);
+        color: #fff;
+
+        &:hover,
+        &:focus-visible {
+            background-color: darken($logout-color, 10%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .logout-button {
+            font-size: 0.7rem; // Adjust the font size for mobile view
+            padding: 0.5rem 1rem; // Adjust the padding for mobile view
+        }
+    }
 }

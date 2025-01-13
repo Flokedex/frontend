@@ -62,3 +62,13 @@ body {
     background-color: $primary-background-color;
     font-family: $primary-font;
 }
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+router-view {
+    flex: 1;
+}

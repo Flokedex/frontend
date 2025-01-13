@@ -1,7 +1,8 @@
 <template>
   <div class="home-view">
     <main>
-      <p class="greeting"> Hello, {{ user.name }} ({{ user.discord_id }})</p>
+      <p class="greeting"> Hello, {{ user.name }}</p>
+      <button class="logout-button" @click="logout">Logout</button>
       <p class="description">Select a dex and start tracking.</p>
       <ul class="nav-links">
         <li v-if="links.length" :key="links[0].path" class="nav-item nav-item-full">
@@ -52,6 +53,20 @@ export default {
   computed: {
     user () {
       return this.$store.getters.getUser || {}
+    }
+  },
+  methods: {
+    logout () {
+      this.$store
+        .dispatch('logout')
+        .then(() => {
+          this.$store.commit('clearUser') // Explicitly clear the user state
+          this.$router.replace('/') // Redirect to the landing page
+        })
+        .catch((error) => {
+          console.error('Logout failed:', error.message || error)
+          alert('Logout failed. Please try again.')
+        })
     }
   }
 }
